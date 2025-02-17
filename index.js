@@ -47,3 +47,14 @@ function swapElements(arr, index1, index2) {
 // console.log(swapElements([1, 2, 3, 4], 1, 3));
 
 // 5. Разделение массива на подмассивы
+
+function splitArray(arr, size) {
+  let newArr = [];
+
+  for (let i = 0; i < arr.length; i = i + size) {
+    newArr.push(arr.slice(i, i + size));
+  }
+  return newArr;
+}
+
+// console.log(splitArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], 3));
