@@ -58,3 +58,26 @@ function splitArray(arr, size) {
 }
 
 // console.log(splitArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], 3));
+
+// 6. Очередь с использованием push и shift
+
+function queueOperations(arr, element) {
+  arr.shift();
+  arr.push(element);
+  return arr;
+}
+
+// console.log(queueOperations([1, 2, 3], 4));
+
+// 7. Реверс массива с использованием push и pop
+
+function reverseArray(arr) {
+  let firstArr = [...arr];
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    newArr.push(firstArr.pop());
+  }
+  return newArr;
+}
+
+console.log(reverseArray([1, 2, 3, 4]));
